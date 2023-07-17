@@ -216,7 +216,7 @@ RunVelocity <- function(
   }
   cell.dist <- as.dist(
     m = 1 - velocyto.R::armaCor(
-      mat = t(x = Embeddings(object = object, reduction = reduction))
+      mat = t(x = Embeddings(object = object, reduction = reduction, nthreads = ncores))
     )
   )
   # Set arguments
